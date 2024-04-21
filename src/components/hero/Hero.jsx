@@ -52,10 +52,17 @@ const Hero = () => {
             Software Engineer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            <a href="#Portfolio">
+            <motion.button 
+              variants={textVariants}>
               Facinating projects
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+              </a>
+              <a href="#Contact">
+            <motion.button variants={textVariants}>
+              Contact Me
+              </motion.button>
+              </a>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -64,18 +71,18 @@ const Hero = () => {
             alt=""
           />
         </motion.div>
-      </div>
-      <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        Developer Engineer
-      </motion.div>
-      <div className="imageContainer">
-        <img src="./myProfile.png" alt="not abailabel" />
-      </div>
+        <motion.div
+          className="slidingTextContainer"
+          variants={sliderVariants}
+          initial="initial"
+          animate="animate"
+        >
+          Developer Engineer
+        </motion.div>
+        </div>
+          <div className="imageContainer">
+            <img src="./myProfile.png" className="imageIndex" alt="not abailabel" />
+          </div>
     </div>
   );
 };

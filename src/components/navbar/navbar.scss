@@ -23,7 +23,12 @@
         display: none;
       }
     }
-
+    .iconHov {
+      cursor: pointer;
+      &:hover {
+        color: #FF5500;
+      }
+    }
     .social {
       display: flex;
       gap: 20px;

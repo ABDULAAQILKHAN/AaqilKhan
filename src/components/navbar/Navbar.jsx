@@ -1,7 +1,9 @@
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faL } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -18,20 +20,40 @@ const Navbar = () => {
           </p>
         </motion.span>
         <div className="social">
-          <a href="#">
-            <img src="./facebook.png" alt="" />
-          </a>
-          <a href="https://www.instagram.com/aaqil.codes/">
-            <img src="./instagram.png" alt="" />
-          </a>
+          <motion.a 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}      
+            class="iconHov" 
+            href="https://www.linkedin.com/in/aaqil-khan-b45135170/">
+              <FontAwesomeIcon 
+              size="2x"
+              icon={faLinkedin} />
+          </motion.a>
+          <motion.a
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }} 
+          class="iconHov" 
+          href="https://github.com/ABDULAAQILKHAN/">
+              <FontAwesomeIcon 
+              size="2x"
+              icon={faGithub} />
+          </motion.a>
+          <motion.a 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            class="iconHov" 
+            href="https://www.instagram.com/aaqil.codes/">
+              <FontAwesomeIcon 
+              size="2x"
+              icon={faInstagram} />
+          </motion.a>
           {
             /**
              * 
-          <a href="#">
-            <img src="/youtube.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
+          <a class="iconHov" href="#">
+          <FontAwesomeIcon 
+          size="2x"
+          icon={faFacebook} />
           </a>
             */
          }

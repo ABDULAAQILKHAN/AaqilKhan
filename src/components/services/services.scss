@@ -1,19 +1,24 @@
 @import "../../app.scss";
 .services {
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  //background: linear-gradient(180deg, #141316, #111132);
+  background-color: transparent;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  gap: 3vh;
+  @include mobile {
+  }
   .textContainer {
-    flex: 1;
+    display: flex;
     align-self: flex-end;
     display: flex;
     align-items: center;
     gap: 20px;
-
+    //background-color: green;
+    color: #FF5500;
     @include mobile {
+      //margin-top: 10vh;
       align-self: center;
       text-align: center;
       flex-direction: column;
@@ -21,8 +26,8 @@
 
     p {
       font-weight: 200;
-      font-size: 20px;
-      color: gray;
+      padding: 20px;
+      font-size: 1.9rem;
       text-align: right;
     }
 
@@ -37,11 +42,12 @@
     }
   }
   .titleContainer {
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
+    height: auto;
     align-items: center;
-
+    //background-color: #FF5500;
     @include mobile {
       width: 100%;
     }
@@ -50,7 +56,9 @@
       display: flex;
       align-items: center;
       gap: 50px;
-
+      &:hover {
+        cursor: default;
+      }
       @include mobile {
         flex-direction: column;
         text-align: center;
@@ -82,11 +90,10 @@
         width: 300px;
         height: 100px;
         border-radius: 50px;
-        background-color: orange;
+        background-color: #FF5500;
         border: none;
         font-size: 24px;
         cursor: pointer;
-
         @include mobile {
           font-size: 16px;
           width: 150px;
@@ -95,17 +102,60 @@
       }
     }
   }
-  .listContainer {
-    flex: 2;
-    display: flex;
-    max-width: 1366px;
-    margin: auto;
+  .bothContainer {
+    height: auto;
+    width: 100%;
+    position: relative;
 
+    .slidingTextContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 20vh;
+      white-space: nowrap;
+      background-color: #FF5500;
+      color: #fdf0f0b0;
+      width: 50%;
+      height: 100%;
+      font-weight: bold;
+      cursor:default;
+    }
+  .listContainer {
+    //background-color: #FF5500;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 3px 3px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."; 
+    max-width: 1366px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     @include mobile {
       flex-direction: column;
       width: 100%;
+      grid-template-areas: 
+      ". ."
+      ". .";
     }
 
+    .skillContainer {
+      height: 80px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: transparent;
+      width: auto;
+      &:hover {
+        color: #FF5500;
+      }
+      @include mobile {
+      }
+    }
     .box {
       padding: 50px;
       border: 0.5px solid gray;
@@ -128,19 +178,20 @@
 
       button {
         padding: 10px;
-        background-color: orange;
+        background-color: #FF5500;
         border: none;
         cursor: pointer;
 
         @include mobile {
           background-color: transparent;
-          border: 1px solid orange;
+          border: 1px solid #FF5500;
           border-radius: 5px;
-          color: orange;
+          color: #FF5500;
           width: 50%;
           padding: 5px;
         }
       }
     }
   }
+}
 }

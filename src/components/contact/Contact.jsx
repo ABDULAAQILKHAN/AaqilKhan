@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 const variants = {
   initial: {
@@ -58,15 +59,23 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>aaqilpro99@gmail.com</span>
+          <a href="mailto:aaqilpro99@gmail.com">aaqilpro99@gmail.com</a>
         </motion.div>
+        {
+          /**
+           * 
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
           <span>cannot specify for now.</span>
         </motion.div>
+          */
+       }
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>cannot specify for now.</span>
+          <a href="tel:8989680289">+91 8989680289</a>
+          {
+
+          }
         </motion.div>
       </motion.div>
       <div className="formContainer">
